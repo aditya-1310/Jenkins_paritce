@@ -1,0 +1,16 @@
+pipeline{
+     agent any
+
+     stages{
+          stage('Build'){
+                        echo "just a simple build stage running"
+                        sh 'cat hello.txt'
+          }
+                
+     }
+     stage("Done"){
+            stages{
+                echo "Build complited. You can add more here later. "
+            }        
+     }
+}
